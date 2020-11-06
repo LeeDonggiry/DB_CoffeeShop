@@ -56,17 +56,19 @@ namespace DB_CoffeeShop
         private void buttoncoffee_americano_Click(object sender, EventArgs e)
         {
             coffee.getinstance().clicked_coffee(americano);
+            coffee.getinstance().everyday_calculate(americano);
         }
 
         private void buttoncoffee_cafelatte_Click(object sender, EventArgs e)
         {
             coffee.getinstance().clicked_coffee(cafelatte);
+            coffee.getinstance().everyday_calculate(cafelatte);
         }
 
         private void buttoncoffee_cafemocha_Click(object sender, EventArgs e)
         {
             coffee.getinstance().clicked_coffee(cafemocha);
-
+            coffee.getinstance().everyday_calculate(cafemocha);
         }
     }
 }

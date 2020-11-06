@@ -40,8 +40,16 @@ namespace DB_CoffeeShop
 
                 while (rdr.Read())
                 {
-                    
+                    string date = string.Format("{0}", rdr["date"]);
+                    string user1_sellsum = string.Format("{0}", rdr["user1_sellsum"]);
+                    string user1_sellprice = string.Format("{0}", rdr["user1_sellprice"]);
+                    string user2_sellsum = string.Format("{0}", rdr["user2_sellsum"]);
+                    string user2_sellprice = string.Format("{0}", rdr["user2_sellprice"]);
+
+                    dt.Rows.Add(date, user1_sellsum, user1_sellprice, user2_sellsum, user2_sellprice);
                 }
+
+
             }
         }
     }
